@@ -1,0 +1,24 @@
+{
+  "name": "vue-cli-mode-and-env",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build:test": "vue-cli-service build --mode test",
+    "build:test-prod": "vue-cli-service build --mode test-prod",
+    "build:prod": "vue-cli-service build --mode prod"
+  },
+  "dependencies": {
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.13",
+    "@vue/cli-service": "~4.5.13",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
