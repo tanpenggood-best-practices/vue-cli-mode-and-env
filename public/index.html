@@ -5,8 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta http-equiv="Cache-Control" content="no-store" />
+    <!-- 使用特殊的环境变量 -->
+    <!-- https://cli.vuejs.org/zh/guide/mode-and-env.html#在客户端侧代码中使用环境变量 -->
     <link rel="icon" href="<%= BASE_URL %>logo.svg" />
+    <!-- 使用自定义环境变量 -->
     <title><%= VUE_APP_MY_TITLE %></title>
+    <!-- 方式一：通过自定义环境变量区分，加载不同的sdk.js -->
+    <% if (VUE_APP_MY_ENV === 'dev') { %>
+    <script src="sdk-dev.js"></script>
+    <% } else if (VUE_APP_MY_ENV === 'test') {%>
+    <script src="sdk-test.js"></script>
+    <% } else if (VUE_APP_MY_ENV === 'prod') {%>
+    <script src="sdk-prod.js"></script>
+    <% } %>
+    <!-- 方式二：通过自定义环境变量区分，加载不同的sdk.js -->
+    <script src="sdk-<%= VUE_APP_MY_ENV %>.js"></script>
   </head>
   <body>
     <noscript>
