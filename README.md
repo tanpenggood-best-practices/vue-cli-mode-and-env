@@ -1,6 +1,6 @@
 # VUE-CLI-MODE-AND-ENV
 
-Vue-cli build project in multiple environment.
+Vue-CLI build project in multiple environment.
 
 
 ## Project Structure
